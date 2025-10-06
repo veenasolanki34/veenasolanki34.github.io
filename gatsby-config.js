@@ -55,6 +55,7 @@ module.exports = {
     author: `Veena Solanki`,
     siteUrl: `https://veenasolanki34.github.io`,
   },
+  pathPrefix: "/",
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
