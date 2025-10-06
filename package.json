@@ -1,8 +1,9 @@
 {
-  "name": "yogesh-singh-solanki",
+  "name": "veenasolanki34",
   "version": "1.0.0",
-  "description": "Yogesh Singh Solanki's Portfolio Website",
-  "author": "Yogesh Singh Solanki",
+  "description": "Veena Solanki's Portfolio Website",
+  "homepage": "https://veenasolanki34.github.io/veenasolanki34.github.io",
+  "author": "Veena Solanki",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
