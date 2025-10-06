@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://veenasolanki34.github.io/sitemap.xml
+Host: https://veenasolanki34.github.io

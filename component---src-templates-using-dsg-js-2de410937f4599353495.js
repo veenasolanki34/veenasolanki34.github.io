@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkveenasolanki34=self.webpackChunkveenasolanki34||[]).push([[385],{1347:function(e,n,l){l.r(n);var a=l(6540);n.default=()=>a.createElement("div",null,a.createElement("h1",null,"Using DSG"))}}]);
+//# sourceMappingURL=component---src-templates-using-dsg-js-2de410937f4599353495.js.map
