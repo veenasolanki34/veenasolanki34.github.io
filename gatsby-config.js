@@ -50,10 +50,10 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Yogesh Singh Solanki - Portfolio`,
+    title: `Veena Solanki - Portfolio`,
     description: `I'm a software engineer specializing in building exceptional digital experiences.`,
-    author: `Yogesh Singh Solanki`,
-    siteUrl: `https://Yogeshsinghsolanki30.github.io`,
+    author: `Veena Solanki`,
+    siteUrl: `https://veenasolanki34.github.io`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -83,8 +83,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://Yogeshsinghsolanki30.github.io',
-        sitemap: 'https://Yogeshsinghsolanki30.github.io/sitemap.xml',
+        host: 'https://veenasolanki34.github.io',
+        sitemap: 'https://veenasolanki34.github.io/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     }

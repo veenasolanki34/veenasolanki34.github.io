@@ -181,7 +181,7 @@ const Header = ({ location }) => {
 
   const navLinks = [
     { name: 'About', url: '/#about' },
-    { name: 'Experience', url: '/#jobs' },
+    { name: 'Experience', url: '/#experience' },
     { name: 'Work', url: '/#projects' },
     { name: 'Contact', url: '/#contact' },
   ];
@@ -194,7 +194,7 @@ const Header = ({ location }) => {
       <StyledNav>
         <div className="logo" tabIndex="-1">
           <Link to="/" aria-label="home">
-            YN
+            VS
           </Link>
         </div>
 
@@ -210,7 +210,7 @@ const Header = ({ location }) => {
 
           <a
             className="resume-button"
-            href="/resume.pdf"
+            href="/Veena_Solanki_SDE.pdf"
             target="_blank"
             rel="noopener noreferrer">
             Resume

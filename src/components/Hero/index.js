@@ -73,25 +73,43 @@ const Hero = () => {
   }, []);
 
   const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Your Name.</h2>;
+  const two = <h2 className="big-heading">Veena Solanki.</h2>;
   const three = <h3 className="big-heading">I build things for the web.</h3>;
   const four = (
+    // <>
+    //   <p>
+    //     I'm a software engineer specializing in building (and occasionally designing) exceptional
+    //     digital experiences. Currently, I'm focused on building accessible, human-centered products
+    //     at{' '}
+    //     <a href="https://example.com" target="_blank" rel="noreferrer">
+    //       Company Name
+    //     </a>
+    //     .
+    //   </p>
+    // </>
     <>
       <p>
-        I'm a software engineer specializing in building (and occasionally designing) exceptional
-        digital experiences. Currently, I'm focused on building accessible, human-centered products
-        at{' '}
-        <a href="https://example.com" target="_blank" rel="noreferrer">
-          Company Name
-        </a>
-        .
+        <b>Glad to e-meet you!</b>
+      </p>
+
+      <p>
+        I am Veena Solanki, a MERN stack developer and an alumnus of{' '}
+        <a href="https://www.medicaps.ac.in/">Medi-Caps Indore</a> and{' '}
+        <a href="https://www.sgsits.ac.in/">SGSITS Indore</a> currently leading full-stack
+        development at <a href="https://codehivetech.com/">CodeHive Technology</a>.
+      </p>
+
+      <p>
+        When not writing the code, you can find me exploring new technologies, sharing insights and
+        writing technical blogs for <a href="https://dapto.ai/">Dapto</a> or doodling from{' '}
+        <a href="https://www.pinterest.com/">Pinterest </a> .
       </p>
     </>
   );
   const five = (
     <a
       className="email-link"
-      href="mailto:your.email@gmail.com"
+      href="mailto:veenaglsolanki@gmail.com"
       target="_blank"
       rel="noreferrer">
       Get In Touch

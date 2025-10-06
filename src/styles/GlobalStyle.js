@@ -20,8 +20,8 @@ const GlobalStyle = createGlobalStyle`
     --fz-xxl: 22px;
     --fz-heading: 32px;
     --border-radius: 4px;
-    --nav-height: 100px;
-    --nav-scroll-height: 70px;
+    --nav-height: 120px;
+    --nav-scroll-height: 90px;
     --tab-height: 42px;
     --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);

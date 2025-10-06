@@ -1,0 +1,291 @@
+import React, { useEffect, useRef, useState } from 'react';
+import styled from 'styled-components';
+
+const StyledExperienceSection = styled.section`
+  max-width: 700px;
+
+  .inner {
+    display: flex;
+
+    @media (max-width: 600px) {
+      display: block;
+    }
+
+    @media (min-width: 700px) {
+      min-height: 340px;
+    }
+  }
+`;
+
+const StyledTabList = styled.div`
+  position: relative;
+  z-index: 3;
+  width: max-content;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media (max-width: 600px) {
+    display: flex;
+    overflow-x: auto;
+    width: calc(100% + 100px);
+    padding-left: 50px;
+    margin-left: -50px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 480px) {
+    width: calc(100% + 50px);
+    padding-left: 25px;
+    margin-left: -25px;
+  }
+
+  li {
+    &:first-of-type {
+      @media (max-width: 600px) {
+        margin-left: 50px;
+      }
+      @media (max-width: 480px) {
+        margin-left: 25px;
+      }
+    }
+    &:last-of-type {
+      @media (max-width: 600px) {
+        padding-right: 50px;
+      }
+      @media (max-width: 480px) {
+        padding-right: 25px;
+      }
+    }
+  }
+`;
+
+const StyledTabButton = styled.button`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--tab-height);
+  padding: 0 20px 2px;
+  border-left: 2px solid var(--lightest-navy);
+  background-color: transparent;
+  color: ${({ isActive }) => (isActive ? 'var(--green)' : 'var(--slate)')};
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+  text-align: left;
+  white-space: nowrap;
+
+  @media (max-width: 768px) {
+    padding: 0 15px 2px;
+  }
+
+  @media (max-width: 600px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 120px;
+    padding: 0 15px;
+    border-left: 0;
+    border-bottom: 2px solid var(--lightest-navy);
+    text-align: center;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--light-navy);
+  }
+`;
+
+const StyledHighlight = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 2px;
+  height: var(--tab-height);
+  border-radius: var(--border-radius);
+  background: var(--green);
+  transform: translateY(calc(${({ activeTabId }) => activeTabId} * var(--tab-height)));
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition-delay: 0.1s;
+
+  @media (max-width: 600px) {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    max-width: var(--tab-width);
+    height: 2px;
+    margin-left: 50px;
+    transform: translateX(calc(${({ activeTabId }) => activeTabId} * var(--tab-width)));
+  }
+
+  @media (max-width: 480px) {
+    margin-left: 25px;
+  }
+`;
+
+const StyledTabPanels = styled.div`
+  position: relative;
+  width: 100%;
+  margin-left: 20px;
+
+  @media (max-width: 600px) {
+    margin-left: 0;
+  }
+`;
+
+const StyledTabPanel = styled.div`
+  width: 100%;
+  height: auto;
+  padding: 10px 5px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: var(--fz-lg);
+
+    li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+
+      &:before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: var(--green);
+        font-size: var(--fz-sm);
+        line-height: 12px;
+      }
+    }
+  }
+
+  h3 {
+    margin-bottom: 2px;
+    font-size: var(--fz-xxl);
+    font-weight: 500;
+    line-height: 1.3;
+
+    .company {
+      color: var(--green);
+    }
+  }
+
+  .range {
+    margin-bottom: 25px;
+    color: var(--light-slate);
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
+  }
+`;
+
+const Experience = () => {
+  const [activeTabId, setActiveTabId] = useState(0);
+  const revealContainer = useRef(null);
+
+  useEffect(() => {
+    // Add reveal animation logic here if needed
+  }, []);
+
+  const jobsData = [
+    {
+  company: 'Codehive Technologies',
+  title: 'Full-Stack Developer',
+  url: 'https://codehivetech.com/', // Replace with actual company URL if available
+  range: 'March 2024 - Present',
+  responsibilities: [
+    'Led enhancements and fixed 20+ bugs for a News Website, improving user experience and performance.',
+    'Implemented Text-to-Speech functionality, enhancing accessibility for 10,000+ users.',
+    'Deployed and configured the website on a Digital Ocean server using Nginx, reducing load time by 30%.',
+    'Developed and integrated 20+ APIs using Node.js and React.js, managing MongoDB database operations efficiently.',
+  ],
+},
+{
+  company: 'Codehive Technologies',
+  title: 'Full-Stack Developer Intern',
+  url: 'https://codehivetech.com/', // Replace with actual company URL if available
+  range: 'October 2023 - March 2024',
+  responsibilities: [
+    'Developed ERP System frontend using HTML, CSS, and Bootstrap to enhance responsiveness and usability.',
+    'Ensured responsive design for 5+ modules, improving accessibility and user engagement.',
+    'Collaborated in a team of 4 to deliver frontend tasks, achieving a 95% project completion rate.',
+  ],
+},
+{
+  company: 'Cyber Instant Pvt. Ltd.',
+  title: 'React.js Developer Intern',
+  url: 'https://cyberinstant.com/', // Replace with actual company URL if available
+  range: 'January 2023 - June 2023',
+  responsibilities: [
+    'Developed responsive web applications using React.js, converting 20+ UI/UX designs into reusable components.',
+    'Enhanced application performance using React hooks and optimized state management, improving UX by 30%.',
+    'Integrated 10+ RESTful APIs for seamless data rendering and implemented Jest testing to ensure 99% code reliability.',
+  ],
+},
+
+  ];
+
+  return (
+    <StyledExperienceSection id="experience" ref={revealContainer}>
+      <h2 className="numbered-heading">Where I've Worked</h2>
+
+      <div className="inner">
+        <StyledTabList role="tablist" aria-label="Job tabs">
+          {jobsData && jobsData.map((job, i) => (
+            <li key={i}>
+              <StyledTabButton
+                isActive={activeTabId === i}
+                onClick={() => setActiveTabId(i)}
+                role="tab"
+                aria-selected={activeTabId === i}
+                aria-controls={`panel-${i}`}
+                id={`tab-${i}`}
+                tabIndex={activeTabId === i ? '0' : '-1'}
+              >
+                <span>{job.company}</span>
+              </StyledTabButton>
+            </li>
+          ))}
+          <StyledHighlight activeTabId={activeTabId} />
+        </StyledTabList>
+
+        <StyledTabPanels>
+          {jobsData && jobsData.map((job, i) => {
+            const isActive = activeTabId === i;
+            return (
+              <StyledTabPanel
+                key={i}
+                id={`panel-${i}`}
+                role="tabpanel"
+                tabIndex={isActive ? '0' : '-1'}
+                aria-labelledby={`tab-${i}`}
+                aria-hidden={!isActive}
+                hidden={!isActive}
+              >
+                <h3>
+                  <span>{job.title}</span>
+                  <span className="company">
+                    &nbsp;@&nbsp;
+                    <a href={job.url} className="inline-link" target="_blank" rel="noopener noreferrer">
+                      {job.company}
+                    </a>
+                  </span>
+                </h3>
+
+                <p className="range">{job.range}</p>
+
+                <ul>
+                  {job.responsibilities && job.responsibilities.map((responsibility, j) => (
+                    <li key={j}>{responsibility}</li>
+                  ))}
+                </ul>
+              </StyledTabPanel>
+            );
+          })}
+        </StyledTabPanels>
+      </div>
+    </StyledExperienceSection>
+  );
+};
+
+export default Experience;

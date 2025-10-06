@@ -1,6 +1,9 @@
 {
-  "name": "my-portfolio",
+  "name": "yogesh-singh-solanki",
   "version": "1.0.0",
+  "description": "Yogesh Singh Solanki's Portfolio Website",
+  "author": "Yogesh Singh Solanki",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -11,18 +14,22 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^2.1.4",
     "gatsby": "^5.0.0",
+    "gatsby-plugin-image": "^3.15.0",
+    "gatsby-plugin-manifest": "^5.15.0",
+    "gatsby-plugin-offline": "^6.15.0",
+    "gatsby-plugin-react-helmet": "^6.15.0",
+    "gatsby-plugin-robots-txt": "^1.8.0",
+    "gatsby-plugin-sharp": "^5.15.0",
+    "gatsby-plugin-styled-components": "^6.15.0",
+    "gatsby-source-filesystem": "^5.15.0",
+    "gatsby-transformer-sharp": "^5.15.0",
+    "prop-types": "^15.8.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "styled-components": "^5.3.0",
-    "gatsby-plugin-styled-components": "^6.0.0",
-    "gatsby-plugin-image": "^3.0.0",
-    "gatsby-plugin-sharp": "^5.0.0",
-    "gatsby-transformer-sharp": "^5.0.0",
-    "gatsby-plugin-manifest": "^5.0.0",
-    "gatsby-plugin-offline": "^6.0.0",
     "react-helmet": "^6.1.0",
-    "gatsby-plugin-react-helmet": "^6.0.0"
+    "styled-components": "^5.3.11"
   },
   "devDependencies": {
     "gh-pages": "^4.0.0",
